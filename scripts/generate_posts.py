@@ -3,6 +3,7 @@ import json
 import re
 from datetime import datetime
 import glob
+import urllib.parse
 
 def strip_html_tags(text):
     return re.sub(r'<[^>]+>', '', text)
@@ -40,10 +41,13 @@ def extract_info(filepath):
     # Try to get better title from inside the HTML
     html_title = get_title_from_html(filepath)
     
+    # Safely encode the filename for web URL usage (fixes Github Pages 404)
+    encoded_filename = urllib.parse.quote(filename)
+    
     return {
         "title": html_title if html_title else title_from_file,
         "description": title_from_file, # Use filename part as a subtitle/description
-        "path": f"교재/{filename}",
+        "path": f"교재/{encoded_filename}",
         "date": date_str
     }
 

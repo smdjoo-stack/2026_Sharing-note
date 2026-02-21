@@ -4,6 +4,7 @@ import re
 from datetime import datetime
 import glob
 import urllib.parse
+import unicodedata
 
 def strip_html_tags(text):
     return re.sub(r'<[^>]+>', '', text)
@@ -41,8 +42,11 @@ def extract_info(filepath):
     # Try to get better title from inside the HTML
     html_title = get_title_from_html(filepath)
     
+    # Normalize Mac's NFD Korean characters to NFC standard before encoding
+    nfc_filename = unicodedata.normalize('NFC', filename)
+    
     # Safely encode the filename for web URL usage (fixes Github Pages 404)
-    encoded_filename = urllib.parse.quote(filename)
+    encoded_filename = urllib.parse.quote(nfc_filename)
     
     return {
         "title": html_title if html_title else title_from_file,

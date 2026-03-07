@@ -1,20 +1,26 @@
 const postsData = [
   {
+    "title": "약속 위에 굳게 서는 삶",
+    "description": "20260307",
+    "path": "materials/20260307.html",
+    "date": "2026-03-07"
+  },
+  {
     "title": "제자 시리즈: 말씀에 순종하는 사람 - 논리를 뛰어넘는 순종",
-    "description": "20260222-그래서",
-    "path": "교재/20260222-%EA%B7%B8%EB%9E%98%EC%84%9C.html",
+    "description": "20260222",
+    "path": "materials/20260222.html",
     "date": "2026-02-21"
   },
   {
     "title": "떠남, 하나님 작품의 시작 - 사도행전 7:1-8",
-    "description": "떠남 하나님의 작품 시작",
-    "path": "교재/20260208_%EB%96%A0%EB%82%A8%20%ED%95%98%EB%82%98%EB%8B%98%EC%9D%98%20%EC%9E%91%ED%92%88%20%EC%8B%9C%EC%9E%91.html",
-    "date": "2026-02-08"
+    "description": "20260208",
+    "path": "materials/20260208.html",
+    "date": "2026-02-07"
   },
   {
     "title": "열방위에서는교회 신년 기도회",
-    "description": "완벽한 화가에게",
-    "path": "교재/20260104_%EC%99%84%EB%B2%BD%ED%95%9C%20%ED%99%94%EA%B0%80%EC%97%90%EA%B2%8C%20.html",
+    "description": "20260104",
+    "path": "materials/20260104.html",
     "date": "2026-01-04"
   }
 ];
